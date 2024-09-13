@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import About from './components/About'
+import Navbar from './components/Navbar'
+import TextField from './components/TextField'
+import Home from './components/Home'
+import '../src/App.css'
+import '../src/bootstrap.css'
+function App () {
+  const [text, setText] = useState('')
+  const [mode, setMode] = useState('light')
+  const style = {
+    backgroundColor: mode === 'light' ? 'white' : '#061138',
+    color: mode === 'light' ? 'black' : 'white'
+  }
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <BrowserRouter>
+        <Navbar title='TextUtils' mode={mode} setMode={setMode} />
+        <Routes>
+          <Route
+            path='/manipulate'
+            element={
+              <TextField
+                text={text}
+                setText={setText}
+                mode={mode}
+                style={style}
+              />
+            }
+          />
+          <Route path='/about' element={<About style={style} mode={mode} />} />
+          <Route
+            path='/'
+            element={<Home mode={mode} style={style} setMode={setMode} />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App
