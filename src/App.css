@@ -13,3 +13,69 @@ ul li a {
   text-decoration: none;
   color: white;
 }
+
+#toggle-menu {
+  display: none;
+}
+
+@media (max-width: 596px) {
+  #toggle-menu {
+    display: block;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+  nav {
+    position: relative;
+  }
+  #nav-items {
+    padding-bottom: 10rem;
+    position: absolute;
+    top: -4rem;
+  }
+  #nav-items ul {
+    position: absolute;
+    top: 7rem;
+    left: -2.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .display-none {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  #nav-items ul {
+    width: 25.4rem;
+  }
+}
+@media (max-width: 390px) {
+  #nav-items ul {
+    width: 26.4rem;
+  }
+}
+
+@media (max-width: 412px) {
+  #nav-items ul {
+    width: 27.7rem;
+  }
+}
+
+@media (max-width: 414px) {
+  #nav-items ul {
+    width: 21rem;
+  }
+}
+
+@media (max-width: 430px) {
+  #nav-items ul {
+    width: 28.8rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #nav-items ul {
+    width: 36rem;
+  }
+}

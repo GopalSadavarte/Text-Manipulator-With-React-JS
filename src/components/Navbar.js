@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 function Navbar (props) {
+  const [toggle, setToggle] = useState('none')
   function setThemeMode () {
     if (props.mode === 'light') {
       props.setMode('dark')
@@ -11,6 +12,15 @@ function Navbar (props) {
       document.body.style.backgroundColor = 'white'
     }
   }
+  function toggleMenu () {
+    if (toggle == 'none') {
+      setToggle('block')
+    } else {
+      setToggle('none')
+    }
+    document.getElementById('nav-items').classList.toggle('display-none')
+  }
+
   return (
     <nav className={`navbar bg-${props.mode}`}>
       <div className='nav-heading w-auto text-center mx-2'>
@@ -22,8 +32,14 @@ function Navbar (props) {
           {props.title}
         </h3>
       </div>
-      <div className='nav-items'>
-        <ul className='d-flex mx-2 my-auto nav-menu'>
+      <div className={`nav-items display-none `} id='nav-items'>
+        <ul
+          className={`${
+            toggle == 'block' ? 'd-block' : 'd-flex'
+          } mx-2 my-auto nav-menu bg-${
+            props.mode === 'light' ? 'light' : 'dark'
+          }`}
+        >
           <li className='mx-2 fs-5'>
             <Link to={`/`}>Home</Link>
           </li>
@@ -31,11 +47,18 @@ function Navbar (props) {
             <Link to={`/manipulate`}>Text Manipulate</Link>
           </li>
           <li className='mx-2 fs-5'>
-            <Link to={`/about`}>About</Link>
+            <Link to={`/docs`}>Docs</Link>
           </li>
         </ul>
       </div>
-      <div className='change-mode mx-3'>
+      <div className='change-mode mx-3 d-flex'>
+        <i
+          className={`fa-solid ${
+            props.mode == 'light' ? 'text-dark' : 'text-light'
+          } fa-bars mx-3 fs-4`}
+          id='toggle-menu'
+          onClick={toggleMenu}
+        ></i>
         <div className='form-check form-switch'>
           <input
             className='form-check-input'

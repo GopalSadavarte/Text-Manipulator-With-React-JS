@@ -30,7 +30,7 @@ function App () {
               />
             }
           />
-          <Route path='/about' element={<About style={style} mode={mode} />} />
+          <Route path='/docs' element={<About style={style} mode={mode} />} />
           <Route
             path='/'
             element={<Home mode={mode} style={style} setMode={setMode} />}
