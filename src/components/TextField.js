@@ -139,14 +139,14 @@ function TextField (props) {
           </button>
           <button
             disabled={props.text.trim().length > 0 ? false : true}
-            className='btn btn-primary mx-2'
+            className='btn btn-primary mx-2 my-2'
             onClick={convertFirstCharToUp}
           >
             Convert first character to Uppercase
           </button>
           <button
             disabled={props.text.trim().length > 0 ? false : true}
-            className='btn btn-primary mx-2'
+            className='btn btn-primary mx-2 my-2'
             onClick={convertFirstCharToLower}
           >
             Convert first character to Lowercase
