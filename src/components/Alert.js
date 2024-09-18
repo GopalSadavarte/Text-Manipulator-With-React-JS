@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function Alert (props) {
   return (
-    <div className='mx-2 my-2' style={{ height: '50px' }}>
+    <div className='mx-2 my-2' style={{ height: '70px' }}>
       {props.alert.type && (
         <div
           className={`alert alert-${props.alert.type}`}
-          style={{ height: '50px' }}
+          style={{ height: 'auto' }}
         >
           <p
             className='text-dark'

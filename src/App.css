@@ -45,6 +45,12 @@ ul li a {
   }
 }
 
+@media (max-width: 333px) {
+  #nav-items ul {
+    width: 22rem;
+  }
+}
+
 @media (max-width: 375px) {
   #nav-items ul {
     width: 25.4rem;
