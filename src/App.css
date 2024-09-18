@@ -45,7 +45,7 @@ ul li a {
   }
 }
 
-@media (max-width: 333px) {
+@media (width: 333px) {
   #nav-items ul {
     width: 22rem;
   }
@@ -80,8 +80,8 @@ ul li a {
   }
 }
 
-@media (max-width: 540px) {
+@media (width: 540px) {
   #nav-items ul {
-    width: 36rem;
+    width: 35.8rem;
   }
 }
