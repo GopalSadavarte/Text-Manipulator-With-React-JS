@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+import logo from '../img/home-bg.png'
 export default function Home (props) {
   return (
     <div className='container my-4' style={props.style}>
@@ -9,10 +9,17 @@ export default function Home (props) {
           Manipulate your content according to you using text utils!!
         </h4>
       </div>
-      <div className='explore-more'>
-        <button className='btn btn-warning mx-auto explore-btn'>
-          <Link to={'/manipulate'}>Explore</Link>
-        </button>
+      <div className='container w-100 justify-content-center'>
+        <Link
+          to={'/manipulate'}
+          className='btn btn-warning'
+          style={{ margin: '0 45%' }}
+        >
+          Explore
+        </Link>
+      </div>
+      <div className='container my-5 mx-auto'>
+        <img className='img img-fluid' src={logo} alt='hello' />
       </div>
     </div>
   )

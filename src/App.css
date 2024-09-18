@@ -44,3 +44,8 @@ ul li a {
     display: none;
   }
 }
+.img {
+  width: 40rem;
+  height: 50rem;
+  margin: 0 20% !important;
+}
