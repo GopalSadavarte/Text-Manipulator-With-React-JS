@@ -45,8 +45,8 @@ ul li a {
     display: none;
   }
 }
-.img {
+img {
   width: 40rem;
   height: 50rem;
-  /* margin: 0 20% !important; */
+  margin-inline: auto;
 }
