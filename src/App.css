@@ -45,8 +45,34 @@ ul li a {
   }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   #nav-items ul {
     width: 32rem !important;
+  }
+} */
+
+@media (min-width: 576px) {
+  #nav-items ul {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  #nav-items ul {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  #nav-items ul {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  #nav-items ul {
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  #nav-items ul {
+    width: 1320px;
   }
 }
