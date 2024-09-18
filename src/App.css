@@ -38,6 +38,7 @@ ul li a {
     top: 7rem;
     left: -2.5rem;
     padding-bottom: 1rem;
+    width: max-content;
   }
 
   .display-none {
