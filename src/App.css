@@ -50,3 +50,17 @@ img {
   height: 50rem;
   margin-inline: auto;
 }
+
+#data-container {
+  display: flex;
+}
+
+@media (min-width: 300px) and (max-width: 1000px) {
+  #data-container {
+    display: block;
+  }
+
+  #data-container .content p {
+    margin-block: 2rem;
+  }
+}
