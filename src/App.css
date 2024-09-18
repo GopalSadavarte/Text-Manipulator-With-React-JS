@@ -44,3 +44,9 @@ ul li a {
     display: none;
   }
 }
+
+@media (min-width: 320px), (max-width: 400px) {
+  #nav-items ul {
+    width: 30rem;
+  }
+}
