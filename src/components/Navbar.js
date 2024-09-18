@@ -32,7 +32,7 @@ function Navbar (props) {
           {props.title}
         </h3>
       </div>
-      <div className={`nav-items display-none `} id='nav-items'>
+      <div className={`nav-items display-none`} id='nav-items'>
         <ul
           className={`${
             toggle == 'block' ? 'd-block' : 'd-flex'
