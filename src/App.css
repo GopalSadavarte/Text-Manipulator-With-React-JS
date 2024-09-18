@@ -47,6 +47,12 @@ ul li a {
 
 @media (width: 333px) {
   #nav-items ul {
+    width: 22.8rem;
+  }
+}
+
+@media (width: 720px) {
+  #nav-items ul {
     width: 14rem;
   }
 }
